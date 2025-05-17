@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Site</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      
+   
+    <header>
+        <h1>Michael Foster</h1>
+        <p>aspiring full-stack developer</p>
+    </header>
+<section>
+    <h2>Projects</h2>
+    <ul>
+        <li>Lead Tracker App</li>
+        <li>SaaS Dashboard</li>
+        <li>Marketing Automation Tools</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <button id="toggleBtn">Show Contact Form</button>
+    <div id="contactForm">
+    <form>
+        <input type="text" placeholder="Name" required></input>
+        <input type="email" placeholder="Your Email">
+        <input type="text" placeholder="Your Message">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</section>
+
+<section class="bio-section">
+    <button id="toggleBio">Show Bio</button>
+    <p id="bio">bio</p>
+</section>
+
+<footer>
+    <p>Copyright 2025</p>
+</footer>
+</body>
+</html>
+
+<script>
+    const btn = document.getElementById("toggleBtn")
+    const form = document.getElementById("contactForm")
+    const bio = document.getElementById("bio")
+    const toggleBio = document.getElementById("toggleBio")
+
+    btn.addEventListener("click", () => {
+      if  (form.style.display === "none") {
+            form.style.display = "block";
+            btn.textContent = "Hide Contact Form";
+        } else {
+        form.style.display = "none";
+        btn.textContent = "Show Contact Form";
+        }
+    });
+
+    toggleBio.addEventListener("click", () => {
+      if  (bio.style.display === "none") {
+            bio.style.display = "block";
+            toggleBio.textContent = "Hide Bio";
+        } else {
+        bio.style.display = "none";
+        toggleBio.textContent = "Show Bio";
+        }
+    });
+</script>
